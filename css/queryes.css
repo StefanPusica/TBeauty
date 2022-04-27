@@ -1,0 +1,304 @@
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+@media (max-width: 84em) {
+    .hero {
+      max-width: 120rem;
+    }
+  
+    .heading-primary {
+      font-size: 4.4rem;
+    }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+    html {
+      /* 9px / 16px  */
+      font-size: 56.25%;
+    }
+  
+    .grid {
+      column-gap: 4.8rem;
+      row-gap: 6.4rem;
+    }
+  
+    .heading-secondary {
+      font-size: 3.6rem;
+    }
+  
+    .heading-tertiary {
+      font-size: 2.4rem;
+    }
+  
+    /* .header {
+      padding: 0 3.2rem;
+    } */
+  
+    .main-nav-list {
+      gap: 3.2rem;
+    }
+  
+    .hero {
+      gap: 4.8rem;
+    }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+@media (max-width: 59em){
+    html {
+        /* 8px / 16px = 0.5 = 50% */
+        font-size: 50%;
+      }
+    
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 0 8rem;
+        gap: 6.4rem;
+      }
+    
+      .hero-text-box,
+      .hero-img-box {
+        text-align: center;
+      }
+
+      .hero-img {
+        width: 30%;
+        
+        transform: translateX(0%);
+    }
+    
+      .logos img {
+        height: 2.4rem;
+      }
+    
+      .treatments-card-content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+      }
+
+      .about-holder{
+        flex-direction: column;
+      }
+
+      .about-holder-left{
+        width: 100%;
+      }
+      .about-holder-right{
+        width: 100%;
+      }
+
+      .about-icon{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+
+      /* MOBILE NAVIGATION */
+      .btn-mobile-nav {
+        display: block;
+        z-index: 9999;
+      }
+
+      .main-nav {
+        background-color: rgba(255, 255, 255, 0.8);
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* transform: translateX(100%); */
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in;
+    
+        /* Hide navigation */
+        /* Allows NO transitions at all */
+        /* display: none; */
+    
+        /* 1) Hide it visually */
+        opacity: 0;
+    
+        /* 2) Make it unaccessible to mouse and keyboard */
+        pointer-events: none;
+    
+        /* 3) Hide it from screen readers */
+        visibility: hidden;
+        z-index: 1000;
+      }
+
+      .btn-mobile-nav{
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+      }
+
+      .nav-open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+      }
+
+      .main-nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.6rem;
+      }
+    
+      .main-nav-link:link,
+      .main-nav-link:visited {
+        font-size: 2.4rem;
+    }
+
+    .nav-open .line1{
+        transform: rotate(-760deg) translateY(5px);
+    }
+
+    .nav-open .line2{
+        display: none;
+    }
+
+    .nav-open .line3{
+        transform: rotate(760deg) translateY(-5px);
+    }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+@media (max-width: 44em){
+    .grid--3-cols,
+    .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .center-card {
+    grid-column: 1 / 2;
+    justify-self: center;
+    transform: translateX(57%);
+  }
+
+  .grid--footer{
+      grid-template-columns: 1fr 1.5fr;
+  }
+
+  .logo-col{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    grid-row-start: 2;
+  }
+
+  .about-icon{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-pages{
+    text-align: center;
+  }
+
+  .menu-footer{
+    justify-self: center;
+    text-align: center;
+  }
+
+  .contact-holder{
+    flex-direction: column !important;
+  }
+
+  .contact-left-side,
+  .contact-right-side{
+    width: 100%;
+}
+
+.contact-icon-holder{
+  grid-template-columns: 1fr;
+  row-gap: 8rem;
+}
+
+.contact-left-side{
+  padding: 4.8rem;
+}
+
+.pricing-plan {
+  width: 100%;
+}
+
+
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+  
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+  
+  .hero {
+    padding: 0 3.2rem;
+  }
+  
+  .hero-img {
+    width: 40%;
+  }
+
+  .center-card{
+    transform: translateY(0);
+  }
+
+  /* Fix space in top nav */
+  .right-side-pre-header {
+    flex-direction: column;
+  }
+
+  .pre-header-link {
+    max-width: 8.5em;
+  }
+  
+  .pre-header-link span {
+    display: none;
+  }
+
+  .left-icon{
+    left: 1rem;
+}
+
+.right-icon{
+    right: 1rem;
+}
+
+.usluge-holder {
+  flex-direction: column;
+}
+  
+}
+
